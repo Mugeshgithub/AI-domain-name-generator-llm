@@ -4,10 +4,15 @@ Stable Fine-tuning Implementation
 Fixed version with conservative parameters to avoid numerical instability
 """
 
+import os
+
+# Disable wandb completely
+os.environ["WANDB_DISABLED"] = "true"
+os.environ["WANDB_MODE"] = "disabled"
+
 import torch
 import json
 import time
-import os
 from transformers import (
     AutoTokenizer, 
     AutoModelForCausalLM,
@@ -124,12 +129,14 @@ def stable_fine_tune():
         max_grad_norm=0.5,  # Reduced from 1.0 (more stable)
         dataloader_pin_memory=False,
         remove_unused_columns=False,
-        report_to=None,
+        report_to=None,  # Disable wandb logging
         save_total_limit=2,
         # Add stability measures
         dataloader_num_workers=0,
         group_by_length=False,
         length_column_name="length",
+        # Disable wandb completely
+        use_wandb=False,
     )
     
     # Data collator
