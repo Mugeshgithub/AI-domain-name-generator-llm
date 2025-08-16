@@ -6,20 +6,20 @@ This project demonstrates the complete lifecycle of fine-tuning a Large Language
 
 ## 🚀 What We Built
 
-**Core Achievement**: Fine-tuned Qwen2.5-3B-Instruct using LoRA techniques to generate creative, relevant domain names from business descriptions, achieving a **21.1% quality improvement** over the base model.
+**Core Achievement**: Fine-tuned Qwen2.5-3B-Instruct using LoRA techniques to generate creative, relevant domain names from business descriptions. The evaluation framework demonstrates the approach, though metrics are illustrative due to the small training dataset.
 
 ### Key Features
 - **LoRA Fine-tuning**: Efficient adaptation using only 0.12% trainable parameters
 - **LLM-as-a-Judge Evaluation**: Automated quality scoring system (0-10 scale)
 - **Edge Case Discovery**: Systematic identification and resolution of model failures
 - **Production API**: FastAPI deployment with comprehensive error handling
-- **Safety Guardrails**: Content filtering for inappropriate requests
+- **Input Validation**: Basic request validation and error handling
 
 ## 📊 Results & Metrics
 
-| Metric | Base Model | Fine-tuned Model | Improvement |
-|--------|------------|------------------|-------------|
-| Quality Score | 6.3/10 | 7.7/10 | **+21.1%** |
+| Metric | Base Model | Fine-tuned Model | Notes |
+|--------|------------|------------------|-------|
+| Quality Score | 6.3/10 | Expected improvement | *Illustrative example* |
 | Trainable Parameters | 3.1B | 3.7M | **99.88% reduction** |
 | Training Time | - | 62.3 minutes | Efficient |
 | Memory Usage | - | 9GB constraint | Optimized |
@@ -43,7 +43,7 @@ This project demonstrates the complete lifecycle of fine-tuning a Large Language
 ```
 familywall-ai-homework/
 ├── 📊 AI_Homework_Experiments.ipynb     # Complete experiment notebook
-├── 🤖 fine_tuned_model_stable/          # LoRA fine-tuned model
+├── 🤖 fine_tuned_model_stable_backup/   # LoRA fine-tuned model
 ├── 🚀 api/                              # Production FastAPI
 ├── 📝 TECHNICAL_REPORT.md               # Technical findings & analysis
 ├── 📊 training_dataset_fixed.json       # Training dataset
@@ -123,19 +123,19 @@ familywall-ai-homework/
 - **Frequency Analysis**: Quantified occurrence of each failure type
 - **Improvement Tracking**: Measured progress in handling edge cases
 
-## 🛡️ Safety & Guardrails
+## 🛡️ Input Validation & Error Handling
 
-### Content Filtering
-- **Inappropriate Content Detection**: Automatic blocking of harmful requests
-- **Input Validation**: Comprehensive request validation
+### Basic Validation
+- **Request Validation**: Input format and type checking
 - **Error Handling**: Graceful degradation with informative messages
+- **Fallback Generation**: Simple domain generation when model fails
 
-### Example Safety Response
+### Example Error Response
 ```json
 {
-  "suggestions": [],
-  "status": "blocked",
-  "message": "Request contains inappropriate content"
+  "domains": [],
+  "status": "error",
+  "message": "Invalid business description format"
 }
 ```
 
@@ -146,7 +146,7 @@ familywall-ai-homework/
 - [x] Systematic evaluation framework
 - [x] Edge case discovery and analysis
 - [x] Iterative improvement approach
-- [x] Safety guardrails implementation
+- [x] Basic input validation and error handling
 - [x] Reproducible experiments
 - [x] Technical documentation
 
@@ -169,11 +169,18 @@ familywall-ai-homework/
 
 ## 🏆 Key Achievements
 
-1. **Quality Improvement**: 21.1% enhancement over base model
+1. **Complete Pipeline**: Full fine-tuning and evaluation pipeline implemented
 2. **Efficiency**: LoRA fine-tuning with minimal parameter overhead
 3. **Stability**: Resolved numerical instability issues
 4. **Production Ready**: Complete API with error handling
 5. **Reproducibility**: Clear setup instructions and version tracking
+
+## ⚠️ Project Limitations
+
+1. **Small Dataset**: Only 15 synthetic training examples (demonstration purposes)
+2. **Basic Evaluation**: Simple keyword-based scoring (illustrative framework)
+3. **Metrics**: Performance claims are examples, not measured improvements
+4. **Scope**: Homework assignment demonstrating technical skills, not production system
 
 ## 🎯 Interview Discussion Points
 
