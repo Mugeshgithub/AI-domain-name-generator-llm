@@ -42,6 +42,16 @@ This report presents the development of a fine-tuned Large Language Model (LLM) 
 - **Training Time**: 62.3 minutes for 2 epochs
 - **Memory Efficiency**: 99.88% parameters frozen, only 0.12% trained
 
+### Resource Limitations
+
+All experiments were conducted on a constrained setup (Apple Silicon, 9GB available memory).  
+As a result:
+- Only one LoRA fine-tuning run was completed.  
+- Iterative improvements were simulated/documented, but not executed due to compute limits.  
+
+This report prioritizes methodology, reproducibility, and engineering clarity.  
+On larger hardware, the framework supports full-scale experimentation.
+
 ---
 
 ## Introduction
