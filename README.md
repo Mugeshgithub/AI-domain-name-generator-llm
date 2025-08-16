@@ -182,15 +182,6 @@ familywall-ai-homework/
 3. **Metrics**: Performance claims are examples, not measured improvements
 4. **Scope**: Homework assignment demonstrating technical skills, not production system
 
-## 🎯 Interview Discussion Points
-
-Be ready to discuss:
-- **LoRA vs Full Fine-tuning**: Why we chose LoRA and the trade-offs
-- **Edge Case Discovery**: How we systematically identified model failures
-- **Evaluation Framework**: LLM-as-a-Judge implementation details
-- **Safety Implementation**: Content filtering approach and testing
-- **Production Considerations**: API design decisions and error handling
-
 ## 📞 Contact
 
 **Developer**: Mugesh Murugaiyan  
