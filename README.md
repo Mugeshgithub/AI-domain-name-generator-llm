@@ -168,6 +168,12 @@ cd api && python main.py
 - **Experiments**: `AI_Homework_Experiments.ipynb`
 - **API Docs**: `api/README.md`
 
+## ⚠️ Limitations & Future Work
+
+- **Resource Constraints**: Due to limited hardware (9GB memory, no high-end GPU), only small-scale LoRA fine-tuning was executed. Full-scale iterations were not feasible in this environment.  
+- **Planned Iterations (Not Executed)**: Dataset augmentation, prompt engineering, and further hyperparameter tuning. These steps are documented in the methodology but not executed due to constraints.  
+- **Reproducibility**: The pipeline and scripts are complete, enabling anyone with sufficient compute resources to reproduce and extend the experiments.
+- 
 ---
 
 ## 🔧 Key Scripts
