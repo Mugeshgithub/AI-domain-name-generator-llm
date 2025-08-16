@@ -82,6 +82,8 @@ familywall-ai-homework/
    # Open http://localhost:8000
    ```
 
+**⚠️ Important**: This project requires large model files (~5.8GB) that are NOT included in the GitHub repository. See [LOCAL_SETUP.md](LOCAL_SETUP.md) for complete setup instructions.
+
 ## 🔬 Experiment Journey
 
 ### Phase 1: Dataset Creation
