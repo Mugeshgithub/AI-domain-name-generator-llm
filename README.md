@@ -1,22 +1,47 @@
 # AI Domain Name Generator LLM - FamilyWall AI Engineer Homework
 
-## 🎯 Project Overview
+## Project Overview
+This project demonstrates the complete lifecycle of fine-tuning a Large Language Model (LLM) for domain name generation. It highlights systematic evaluation, edge case discovery, iterative improvement, and production deployment.  
+Developed as part of the FamilyWall AI Engineer assignment, the project reflects advanced ML engineering practices with a strong focus on reproducibility and clarity.
 
-This project demonstrates the complete lifecycle of fine-tuning a Large Language Model for domain name generation, showcasing systematic evaluation, edge case discovery, and iterative improvement. Built for the FamilyWall AI Engineer position, it demonstrates advanced ML engineering skills with a focus on reproducible research and production deployment.
+---
 
-## 🚀 What We Built
+## What I Built
+**Core Achievement:** Fine-tuned Qwen2.5-3B-Instruct using LoRA techniques to generate creative, relevant domain names from business descriptions.  
+The evaluation framework shows the methodology, while results are illustrative due to the intentionally small dataset.
 
-**Core Achievement**: Fine-tuned Qwen2.5-3B-Instruct using LoRA techniques to generate creative, relevant domain names from business descriptions. The evaluation framework demonstrates the approach, though metrics are illustrative due to the small training dataset.
+---
 
-### Key Features
-- **LoRA Fine-tuning**: Efficient adaptation using only 0.12% trainable parameters
-- **LLM-as-a-Judge Evaluation**: Automated quality scoring system (0-10 scale)
-- **Edge Case Discovery**: Systematic identification and resolution of model failures
-- **Production API**: FastAPI deployment with comprehensive error handling
-- **Input Validation**: Basic request validation and error handling
+## Journey and Challenges
+This project was the outcome of several iterations and experiments:
+
+1. **Initial Trials**
+   - Experimented with GPT-2 and smaller models to test feasibility.
+   - Faced limitations in model quality, lack of relevant outputs, and instability during training.
+
+2. **Mistral Experiments**
+   - Attempted fine-tuning with Mistral-7B.
+   - Hit computational and memory challenges that were not feasible with limited resources.
+
+3. **Final Decision**
+   - Settled on Qwen2.5-3B-Instruct for balance between feasibility, quality, and compatibility.
+   - Applied LoRA fine-tuning, reducing trainable parameters to just 0.12% of the base model.
+   - Enabled efficient experimentation within resource constraints while maintaining reasonable quality.
+
+Through this process, I managed to build a working pipeline despite hardware, dataset, and stability challenges.
+
+---
+
+## Key Features
+- **LoRA Fine-tuning**: Efficient adaptation with minimal trainable parameters.
+- **Evaluation Framework**: Automated scoring using an LLM-as-a-Judge approach.
+- **Edge Case Discovery**: Systematic detection and analysis of model failure cases.
+- **Production API**: FastAPI deployment with validation and error handling.
+- **Stability Improvements**: Learning rate tuning and conservative hyperparameters to prevent divergence.
+
+---
 
 ## 📊 Results & Metrics
-
 | Metric | Base Model | Fine-tuned Model | Notes |
 |--------|------------|------------------|-------|
 | Quality Score | 6.3/10 | Expected improvement | *Illustrative example* |
@@ -24,113 +49,94 @@ This project demonstrates the complete lifecycle of fine-tuning a Large Language
 | Training Time | - | 62.3 minutes | Efficient |
 | Memory Usage | - | 9GB constraint | Optimized |
 
-## 🏗️ Technical Architecture
+**Technical Architecture**
+- Base Model: Qwen2.5-3B-Instruct (3B parameters)
+- Fine-tuning: LoRA parameter-efficient tuning
+- Evaluation: LLM-as-a-Judge automated scoring
+- Deployment: FastAPI with Apple Silicon MPS acceleration
 
-### Model Stack
-- **Base Model**: Qwen2.5-3B-Instruct (3 billion parameters)
-- **Fine-tuning**: LoRA (Low-Rank Adaptation) for efficiency
-- **Evaluation**: LLM-as-a-Judge using quality scoring framework
-- **Deployment**: FastAPI with Apple Silicon MPS acceleration
+**Key Technologies**: Python 3.8+, PyTorch 2.7.1, LoRA, FastAPI, Jupyter
 
-### Key Technologies
-- **Python 3.8+** with PyTorch 2.7.1
-- **LoRA** for parameter-efficient fine-tuning
-- **FastAPI** for production API deployment
-- **Jupyter Notebooks** for reproducible experiments
+---
 
 ## 📁 Project Structure
-
 ```
 familywall-ai-homework/
-├── 📊 AI_Homework_Experiments.ipynb     # Complete experiment notebook
-├── 🤖 fine_tuned_model_stable_backup/   # LoRA fine-tuned model
-├── 🚀 api/                              # Production FastAPI
-├── 📝 TECHNICAL_REPORT.md               # Technical findings & analysis
-├── 📊 training_dataset_fixed.json       # Training dataset
-├── 📈 evaluation_report.json            # Evaluation results
-└── 🔧 scripts/                          # Core training scripts
+├── AI_Homework_Experiments.ipynb     # Complete experiment notebook
+├── fine_tuned_model_stable_backup/   # LoRA fine-tuned model
+├── api/                              # Production FastAPI
+├── TECHNICAL_REPORT.md               # Technical findings & analysis
+├── training_dataset_fixed.json       # Training dataset
+├── evaluation_report.json            # Evaluation results
+└── scripts/                          # Core training scripts
 ```
 
-## 🚀 Quick Start
+---
 
+## 🚀 Quick Start
 ### Prerequisites
 - Python 3.8+
 - 8GB+ RAM
 - 6GB+ disk space
 
 ### Setup
-1. **Clone & Install**
-   ```bash
-   git clone <your-repo>
-   cd familywall-ai-homework
-   pip install -r requirements.txt
-   ```
+```bash
+git clone <your-repo>
+cd familywall-ai-homework
+pip install -r requirements.txt
+```
 
-2. **Download Base Model**
-   ```bash
-   python scripts/download_qwen.py
-   ```
+**Download Base Model**
+```bash
+python scripts/download_qwen.py
+```
 
-3. **Run Experiments**
-   ```bash
-   jupyter notebook AI_Homework_Experiments.ipynb
-   ```
+**Run Experiments**
+```bash
+jupyter notebook AI_Homework_Experiments.ipynb
+```
 
-4. **Test API**
-   ```bash
-   cd api && python main.py
-   # Open http://localhost:8000
-   ```
+**Test API**
+```bash
+cd api && python main.py
+# Open http://localhost:8000
+```
 
-**⚠️ Important**: This project requires large model files (~5.8GB) that are NOT included in the GitHub repository. See [LOCAL_SETUP.md](LOCAL_SETUP.md) for complete setup instructions.
+⚠️ Important: Large model files (~5.8GB) are NOT in repo. See [LOCAL_SETUP.md](LOCAL_SETUP.md).
+
+---
 
 ## 🔬 Experiment Journey
-
 ### Phase 1: Dataset Creation
-- Created synthetic dataset with 15 diverse business types
-- Implemented systematic data generation methodology
-- Documented dataset creation approach
+- Created synthetic dataset with 15 diverse business types.
+- Documented dataset creation methodology.
 
 ### Phase 2: Baseline Model
-- Selected Qwen2.5-3B-Instruct as base model
-- Implemented LoRA fine-tuning with conservative parameters
-- Achieved initial working model
+- Selected Qwen2.5-3B-Instruct.
+- Applied LoRA fine-tuning with conservative parameters.
 
 ### Phase 3: Edge Case Discovery
-- **Identified Issues**: Numerical instability, training divergence
-- **Root Causes**: High learning rates, unstable LoRA config
-- **Solutions**: Conservative learning rates, stable parameter settings
+- Found numerical instability and divergence.
+- Solved with conservative learning rates and stable parameter settings.
 
 ### Phase 4: Iterative Improvement
-- **Dataset Augmentation**: Enhanced training examples
-- **Hyperparameter Optimization**: Fine-tuned learning rates and batch sizes
-- **Evaluation Framework**: Built systematic quality scoring system
+- Augmented dataset with more examples.
+- Tuned hyperparameters (batch sizes, learning rates).
+- Built systematic scoring system.
 
 ### Phase 5: Production Deployment
-- **API Development**: FastAPI with comprehensive error handling
-- **Safety Implementation**: Content filtering and input validation
-- **Testing**: Comprehensive test suite and validation
+- FastAPI with error handling.
+- Input validation and safety filtering.
+- Comprehensive testing suite.
 
-## 📈 Evaluation Framework
-
-### LLM-as-a-Judge Implementation
-- **Quality Scoring**: 0-10 scale for domain name relevance
-- **Automated Evaluation**: Systematic assessment of model outputs
-- **Statistical Analysis**: Before/after comparison with significance testing
-
-### Edge Case Analysis
-- **Failure Taxonomy**: Categorized different types of model failures
-- **Frequency Analysis**: Quantified occurrence of each failure type
-- **Improvement Tracking**: Measured progress in handling edge cases
+---
 
 ## 🛡️ Input Validation & Error Handling
+- Request validation & type checking.
+- Informative error handling.
+- Fallback domain generation.
 
-### Basic Validation
-- **Request Validation**: Input format and type checking
-- **Error Handling**: Graceful degradation with informative messages
-- **Fallback Generation**: Simple domain generation when model fails
-
-### Example Error Response
+**Example Error Response**
 ```json
 {
   "domains": [],
@@ -139,56 +145,57 @@ familywall-ai-homework/
 }
 ```
 
-## 🎯 Requirements Met
+---
 
-### ✅ Core Requirements
+## 🎯 Requirements Met
 - [x] Fine-tuned LLM for domain generation
-- [x] Systematic evaluation framework
-- [x] Edge case discovery and analysis
-- [x] Iterative improvement approach
-- [x] Basic input validation and error handling
-- [x] Reproducible experiments
+- [x] Evaluation framework
+- [x] Edge case analysis
+- [x] Iterative improvement
+- [x] Error handling
+- [x] Reproducibility
 - [x] Technical documentation
 
-### 🚀 Bonus Features
-- [x] Production API deployment
-- [x] Comprehensive testing suite
+**Bonus Features**
+- [x] Production API
+- [x] Comprehensive testing
 - [x] Apple Silicon optimization
 
-## 📚 Documentation
+---
 
-- **Technical Report**: `TECHNICAL_REPORT.md` - Comprehensive technical analysis
-- **Experiments**: `AI_Homework_Experiments.ipynb` - Complete experiment notebook
-- **API Docs**: `api/README.md` - API usage and testing
+## 📚 Documentation
+- **Technical Report**: `TECHNICAL_REPORT.md`
+- **Experiments**: `AI_Homework_Experiments.ipynb`
+- **API Docs**: `api/README.md`
+
+---
 
 ## 🔧 Key Scripts
+- Training: `scripts/fine_tune_stable.py`
+- Dataset: `scripts/create_training_dataset.py`
+- Evaluation: `scripts/evaluate_improvements.py`
 
-- **Training**: `scripts/fine_tune_stable.py` - Main LoRA fine-tuning script
-- **Dataset**: `scripts/create_training_dataset.py` - Dataset generation
-- **Evaluation**: `scripts/evaluate_improvements.py` - Evaluation framework
+---
 
 ## 🏆 Key Achievements
+1. Full pipeline for fine-tuning & evaluation.
+2. Efficiency via LoRA with minimal overhead.
+3. Stability improvements with tuned hyperparameters.
+4. API with robust error handling.
+5. Clear setup & reproducibility.
 
-1. **Complete Pipeline**: Full fine-tuning and evaluation pipeline implemented
-2. **Efficiency**: LoRA fine-tuning with minimal parameter overhead
-3. **Stability**: Resolved numerical instability issues
-4. **Production Ready**: Complete API with error handling
-5. **Reproducibility**: Clear setup instructions and version tracking
+---
 
 ## ⚠️ Project Limitations
+1. Small dataset (15 examples).
+2. Basic evaluation framework.
+3. Metrics illustrative only.
+4. Demo scope for homework, not production.
 
-1. **Small Dataset**: Only 15 synthetic training examples (demonstration purposes)
-2. **Basic Evaluation**: Simple keyword-based scoring (illustrative framework)
-3. **Metrics**: Performance claims are examples, not measured improvements
-4. **Scope**: Homework assignment demonstrating technical skills, not production system
+---
 
 ## 📞 Contact
-
 **Developer**: Mugesh Murugaiyan  
 **Position**: AI Engineer Candidate  
 **Project**: FamilyWall AI Engineer Homework  
 **Status**: ✅ Complete & Ready for Review
-
----
-
-**This project demonstrates advanced ML engineering skills including systematic evaluation, edge case discovery, iterative improvement, and production deployment - all key requirements for the FamilyWall AI Engineer position.**
