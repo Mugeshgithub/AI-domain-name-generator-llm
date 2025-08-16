@@ -65,6 +65,16 @@
     "average_quality_score": 7.7,
     "average_generation_time": 468.0
   },
+  "model_comparison_summary": {
+    "fine_tuned_model": {
+      "average_quality_score": 7.7,
+      "average_generation_time": 468.0
+    },
+    "improvements": {
+      "quality_improvement": 1.37,
+      "percentage_quality_improvement": 21.1
+    }
+  },
   "overall_improvements": {
     "quality_score": {
       "base_model": 6.33,
