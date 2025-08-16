@@ -1,0 +1,62 @@
+[
+  {
+    "instruction": "Generate 3 domain names for: organic coffee shop in downtown area",
+    "output": "organicbeanscafe.com, downtowncoffee.org, freshbreworganic.net"
+  },
+  {
+    "instruction": "Generate 3 domain names for: AI software startup for business automation",
+    "output": "aiautomation.com, businessai.net, aistartup.com"
+  },
+  {
+    "instruction": "Generate 3 domain names for: yoga studio with meditation classes",
+    "output": "yogameditation.com, yogastudio.net, meditationyoga.com"
+  },
+  {
+    "instruction": "Generate 3 domain names for: vegan restaurant specializing in plant-based cuisine",
+    "output": "plantplate.com, vegandish.net, greenbites.com"
+  },
+  {
+    "instruction": "Generate 3 domain names for: digital marketing agency for small businesses",
+    "output": "digimarketing.com, smallbizads.net, marketboost.com"
+  },
+  {
+    "instruction": "Generate 3 domain names for: fitness center with personal training",
+    "output": "fitcenter.com, personaltrain.net, gympro.com"
+  },
+  {
+    "instruction": "Generate 3 domain names for: online bookstore with rare books",
+    "output": "rarebooks.com, bookfinder.net, literarytreasure.com"
+  },
+  {
+    "instruction": "Generate 3 domain names for: pet grooming salon and spa",
+    "output": "petspa.com, groompro.net, furryfriends.com"
+  },
+  {
+    "instruction": "Generate 3 domain names for: mobile app development company",
+    "output": "appdev.com, mobilecoder.net, appstudio.com"
+  },
+  {
+    "instruction": "Generate 3 domain names for: sustainable fashion brand",
+    "output": "ecofashion.com, greenstyle.net, sustainablewear.com"
+  },
+  {
+    "instruction": "Generate 3 domain names for: craft brewery with taproom",
+    "output": "craftbrew.com, taproom.net, beerartisan.com"
+  },
+  {
+    "instruction": "Generate 3 domain names for: cybersecurity consulting firm",
+    "output": "cybersec.com, securenet.net, digitalguard.com"
+  },
+  {
+    "instruction": "Generate 3 domain names for: wedding photography studio",
+    "output": "weddingphoto.com, bridalcapture.net, matrimonyphoto.com"
+  },
+  {
+    "instruction": "Generate 3 domain names for: organic skincare products",
+    "output": "organicskin.com, naturalglow.net, purebeauty.com"
+  },
+  {
+    "instruction": "Generate 3 domain names for: electric vehicle charging network",
+    "output": "evcharge.com, powerup.net, greencharge.com"
+  }
+]

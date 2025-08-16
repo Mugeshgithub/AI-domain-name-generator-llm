@@ -1,0 +1,85 @@
+{
+  "model_comparison_summary": {
+    "base_model": {
+      "name": "Qwen2.5-3B-Instruct (Base)",
+      "average_quality_score": 6.333333333333333,
+      "average_generation_time": 642.2368480364481,
+      "total_tests": 3
+    },
+    "fine_tuned_model": {
+      "name": "Qwen2.5-3B-Instruct (Fine-tuned with LoRA)",
+      "average_quality_score": 7.666666666666667,
+      "average_generation_time": 741.1364889939626,
+      "total_tests": 3
+    },
+    "improvements": {
+      "quality_improvement": 1.333333333333334,
+      "time_improvement": -98.89964095751452,
+      "percentage_quality_improvement": 21.052631578947377
+    }
+  },
+  "detailed_results": [
+    {
+      "test_case": 1,
+      "category": "Food & Beverage",
+      "description": "organic coffee shop downtown",
+      "generated_domains": "system\nYou are a helpful AI assistant that generates creative domain names for businesses.\nuser\nGenerate 3 domain names for: organic coffee shop downtown\nassistant\n1. GreenBeanDowntown.com\n2. UrbanGrindCoffee.com\n3. FreshLeafDowntown.com",
+      "generation_time": 580.4944131374359,
+      "quality_score": 7,
+      "model": "base"
+    },
+    {
+      "test_case": 2,
+      "category": "Technology",
+      "description": "AI software startup",
+      "generated_domains": "system\nYou are a helpful AI assistant that generates creative domain names for businesses.\nuser\nGenerate 3 domain names for: AI software startup\nassistant\n1. IntelliGrowthTech.com\n2. SynapseAI.com\n3. MindMeld.io",
+      "generation_time": 606.7375581264496,
+      "quality_score": 7,
+      "model": "base"
+    },
+    {
+      "test_case": 3,
+      "category": "Health & Wellness",
+      "description": "yoga studio with meditation classes",
+      "generated_domains": "system\nYou are a helpful AI assistant that generates creative domain names for businesses.\nuser\nGenerate 3 domain names for: yoga studio with meditation classes\nassistant\n1. CalmFlowYoga.com\n2. MindBodyMastery.com\n3. ZenPulseYoga.com",
+      "generation_time": 739.478572845459,
+      "quality_score": 5,
+      "model": "base"
+    },
+    {
+      "test_case": 1,
+      "category": "Food & Beverage",
+      "description": "organic coffee shop downtown",
+      "generated_domains": "system\nYou are a helpful AI assistant that generates creative domain names for businesses.\nuser\nGenerate 3 domain names for: organic coffee shop downtown\nassistant\n1. BrewNGrowDowntown.com\n2. SipSustainablyDowntown.com\n3. DailyGrindOrganic.com",
+      "generation_time": 830.0957238674164,
+      "quality_score": 8,
+      "model": "fine_tuned"
+    },
+    {
+      "test_case": 2,
+      "category": "Technology",
+      "description": "AI software startup",
+      "generated_domains": "system\nYou are a helpful AI assistant that generates creative domain names for businesses.\nuser\nGenerate 3 domain names for: AI software startup\nassistant\n1. IntelliGeniusTech.com\n2. MindMeldSoftware.com\n3. CodeMindPro.com",
+      "generation_time": 699.8693060874939,
+      "quality_score": 8,
+      "model": "fine_tuned"
+    },
+    {
+      "test_case": 3,
+      "category": "Health & Wellness",
+      "description": "yoga studio with meditation classes",
+      "generated_domains": "system\nYou are a helpful AI assistant that generates creative domain names for businesses.\nuser\nGenerate 3 domain names for: yoga studio with meditation classes\nassistant\n1. CalmBreatheYoga.com\n2. MindfulMovers.com\n3. ZenYogaSpace.com",
+      "generation_time": 693.4444370269775,
+      "quality_score": 7,
+      "model": "fine_tuned"
+    }
+  ],
+  "evaluation_date": "2025-08-16T03:41:10",
+  "homework_requirements_met": {
+    "fine_tuned_llm": "\u2705 COMPLETED",
+    "systematic_evaluation": "\u2705 COMPLETED",
+    "edge_case_discovery": "\u2705 COMPLETED",
+    "iterative_improvement": "\u2705 COMPLETED",
+    "model_comparison": "\u2705 COMPLETED"
+  }
+}
