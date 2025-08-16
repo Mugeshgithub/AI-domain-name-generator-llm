@@ -27,10 +27,26 @@ This project successfully demonstrates the complete lifecycle of fine-tuning a L
 - Fine-tuning: LoRA (Low-Rank Adaptation) - only 0.12% parameters trained
 - Evaluation: LLM-as-a-Judge quality scoring (0-10 scale)
 
-##  Quick Start
-1. Install: `pip install -r requirements.txt`
-2. Run: `jupyter notebook AI_Homework_Experiments.ipynb`
-3. Test API: `cd api && python main.py`
+## Setup & Quick Start
+
+### Prerequisites
+- Python 3.8+
+- 8GB+ RAM (for model loading)
+- 6GB+ disk space (for base model)
+
+### Installation
+1. Clone this repository
+2. Install dependencies: `pip install -r requirements.txt`
+3. Download the base model: `python scripts/download_qwen.py`
+   - This downloads Qwen2.5-3B-Instruct (~5.7GB) automatically
+   - The model will be stored in `./qwen2.5-3b-instruct/`
+
+### Usage
+1. **Run Experiments**: `jupyter notebook AI_Homework_Experiments.ipynb`
+2. **Test API**: `cd api && python main.py`
+3. **Access API**: Open `http://localhost:8000` in your browser
+
+**Note**: The base model is not included in git due to size constraints. Run the download script to get started.
 
 ##  Status
 HOMEWORK COMPLETE!  All requirements met + bonus API features implemented.
